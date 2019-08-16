@@ -38,7 +38,7 @@ public class MovieInfo {
             }
     )
     public CatalogItem getCatalogItem(Rating rating) {
-        Movie movie = restemplate.getForObject("http://movie-info-service/movies/" + rating.getMovieId(), Movie.class);
+        Movie movie = restemplate.getForObject("http://movie-info-service/api/movies/" + rating.getMovieId(), Movie.class);
         return new CatalogItem(movie.getName(), "Desc", rating.getRating());
     }
 

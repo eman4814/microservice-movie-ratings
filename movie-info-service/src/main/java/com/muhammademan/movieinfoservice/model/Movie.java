@@ -22,16 +22,14 @@ public class Movie implements Serializable {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int movieId;
     private String name;
-    private String desc;
     
 
     public Movie() {
     }
 
-    public Movie(int movieId, String name, String desc) {
+    public Movie(int movieId, String name) {
         this.movieId = movieId;
         this.name = name;
-        this.desc = desc;
     }
 
     public int getMovieId() {
@@ -50,11 +48,4 @@ public class Movie implements Serializable {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
 }
